@@ -6,6 +6,7 @@ package org.example;
  */
 public class main {
     public static void main(String[] args) {
-        System.out.println(1);
+        App app = new App();
+        App.main(null);
     }
 }
