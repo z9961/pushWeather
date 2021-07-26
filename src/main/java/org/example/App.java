@@ -31,7 +31,7 @@ public class App {
                     "win")).append(json.get("win_speed")).append(",").append(json.get("air_tips").toString().replace(
                     "，", ","));
 
-            qurl = "https://push.xuthus.cc/group/e5327555e79e21682592c46f5d9f2140?c=" + s.toString();
+            qurl = "https://push.xuthus.cc/group/e5327555e79e21682592c46f5d9f2140?c=" + s;
             request = new Request.Builder().url(qurl)
                     .get().build();
             client = new OkHttpClient().newBuilder()

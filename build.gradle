@@ -2,13 +2,13 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
+    maven { url 'https://maven.aliyun.com/repository/central' }
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
     mavenCentral()
     mavenLocal()
-    maven { url 'https://maven.aliyun.com/repository/central' }
     maven { url 'https://repo.spring.io/release' }
     maven { url 'https://repo.spring.io/milestone' }
     maven { url 'http://repo.spring.io/snapshot' }
-    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     maven { url 'http://119.3.176.130:8081/repository/patzn-releases/' }
     maven { url 'http://119.3.176.130:8081/repository/patzn-snapshots/' }
@@ -29,6 +29,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:6.1.0'
+
     }
 }
 
@@ -44,4 +45,7 @@ shadowJar {
 dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
     compile 'com.alibaba:fastjson:1.2.62'
+    compile("junit:junit:4.12")
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+
 }
